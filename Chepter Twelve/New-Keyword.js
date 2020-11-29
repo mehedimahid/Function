@@ -1,5 +1,6 @@
 
-//Tutorial number - 111
+//tutorial number 112
+
 
 var Rectangle = function(width, height){     //name ar surute obosoi capital word hobe
 
@@ -17,6 +18,13 @@ var Rectangle = function(width, height){     //name ar surute obosoi capital wor
     }
 }
 
-var rect = new Rectangle(10, 9)
-rect.Draw()
+function myNew(constructor) {
+    var obj = {}
+    Object.setPrototypeOf(obj, constructor.prototype)
+    var argArray = Array.prototype.slice.apply(arguments)
+    constructor.apply(obj, argArray.slice(1))
+    return obj
+}
 
+var rect = myNew(Rectangle, 45, 40)
+rect.Draw()
