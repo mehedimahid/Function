@@ -15,3 +15,4 @@ var p2 = new Person('Mehedi Hasan')
 
 console.log(p1)
 console.log(p2)
+

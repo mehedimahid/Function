@@ -141,21 +141,128 @@ let obj ={
 
                                         //155 Set in Javascript 
 
-let set = new Set([1, 2, 3])
-set.add(4)
-set.add(5)
-set.add(1)          //duplicate hobe na 
-set.add(2)
+// let set = new Set([1, 2, 3])
+// set.add(4)
+// set.add(5)
+// set.add(1)          //duplicate hobe na 
+// set.add(2)
 // console.log(set)
 // console.log(set.size)
 // set.clear()      //sob clear kore dibe
 // console.log(set)
 
 // set.delete(4)       //kno kisu dilete korte chaile 
-console.log(set.has(5))      //kno value ase ki nai ta chake korbe
-console.log(set)
-set.toJSON()
-console.log(set)
+// console.log(set.has(5))      //kno value ase ki nai ta chake korbe
+// console.log(set)
+// console.log(set.keys())
+// console.log(set.values())
+
+// let keysIterate = set.keys()
+// console.log(keysIterate.next())
+
+// let valueIterate = set.keys()
+// console.log(valueIterate.next())
+
+// console.log(isIterable(set))
+
+// for (let v of set) {
+//     console.log(v)
+// }
+
+// console.log(set.entries())
+
+                                    //156 Map in Javascript
+
+// let map = new Map([             //map a jekono kisu keys hote pare
+//     ['a', 10],
+//     ['b', 20],
+//     ['c', 30]
+// ])
+
+// map.set('d', 40)
+// map.set({name:'MH Mahid'}, 30)
+// map.delete('c')              //keys dite hobe values hobe na
+// console.log(map)
+// console.log(map.size)
+// console.log(map.get('a'))               //kon key ar value ta amra chassi
+// console.log(map.values())
+// console.log(map.keys())
+// console.log(map.entries())
+
+
+// for (let [k, v] of map) {       //[keys, values]
+//     console.log(v, k)
+// }
+
+// map.forEach((v, k) =>{              //(values, keys)
+//     console.log(k, v)
+// })
+
+
+                                    //158 Weak Set in Javascript
+
+let a = {a: 10}, b = {b: 20}
+
+// let set = new Set([a, b])
+// a= null                     //avabe kaj korte hobe
+
+// console.log(set)
+
+// let arr = [...set]
+// console.log(arr)
+// console.log(arr[0])
+
+
+// let weakSet = new WeakSet([a, b])
+// console.log(weakSet)
+// a = null
+
+// console.log(weakSet)
+// console.log(weakSet.has(a))
+// console.log(weakSet.has(b))
+
+
+//                                                         //159 Weak Map in Javascript
+
+// let weakMap = new WeakMap ([[a, 45], [b, 70]])
+// a= null
+// console.log(weakMap)
+// console.log(weakMap.get(a))
+// console.log(weakMap.has(a))
+// console.log(weakMap.has(b))
+
+
+                                    //160 Class in Javascript
+
+    //chep. 13,14 
+// function Rectangle(width, height){
+//     this.width = width
+//     this.height = height
+// }
+
+// Rectangle.prototype.draw = function(){
+//     console.log(this)
+//     console.log('Drawing....')
+// }
+
+// let rect1 = new Rectangle(12, 25)
+
+
+// class Rectangle{
+//     constructor(width,height){
+//         this.width = width
+//         this.height = height
+//     }
+//     name = 'MH Mahid'
+
+//     draw(){
+//         console.log(drawing)
+//     }
+// }
+
+// let rect1 = new Rectangle(63, 60)
+// console.log(rect1)
+// console.log(typeof Rectangle)
 
 
 
