@@ -269,6 +269,140 @@ let a = {a: 10}, b = {b: 20}
 
 
 
+                    //162 Static Method in Javascript
+
+
+// class Person{
+//     constructor(name, email){
+//         this.name = name
+//         this.email = email
+//     }
+//     print(){
+//         console.log(this.name, this.email)
+//     }
+//     static create(str){      //Static Method  1st Static tar por ja kusi name dite hobe
+//         let person = JSON.parse(str)
+//         return new Person(person.name, person.email)
+//     }
+// }
+
+// let str = '{"name": "MH Mahid", "email": "mehedimahid19@gmail.com"}'
+
+// let P1 = Person.create(str)
+// console.log(P1)
+// console.log(P1 instanceof Person)
+// P1.print()
+
+
+
+
+
+
+//                                     //163 "This" in Class in Javascript 
+
+// function Shape(){
+//     this.draw = function(){
+//         console.log(this)
+//     }
+// }
+
+// let S1 = new Shape()
+// let anotherDraw =  S1.draw
+// anotherDraw()
+
+
+// class Person{
+//     constructor(name, email){
+//         this.name = name
+//         this.email = email
+//     }
+
+//     print(){
+//         console.log(this.name, this.email)
+//     }
+
+//     test(){
+//         console.log(this)
+//     }
+
+//     static create(str){      //Static Method  1st Static tar por ja kusi name dite hobe
+//         let person = JSON.parse(str)
+//         return new Person(person.name, person.email)
+//     }
+// }
+
+// let str = '{"name": "MH Mahid", "email": "mehedimahid19@gmail.com"}'
+
+// let P1 = Person.create(str)
+// console.log(P1)
+// console.log(P1 instanceof Person)
+// P1.print()
+// let test = P1.test
+// test()
+
+
+
+
+
+                            //164 Private Data with Symbol in Javascript 
+
+// const _redius = Symbol()
+// const _name = Symbol()
+// const _draw = Symbol()
+
+// class circle{
+//     constructor(redius, name){
+//         this[_redius] = redius
+//         this[_name] = name
+//     }
+
+//     [_draw](){
+//         console.log('drowing...')
+//     }
+// }
+
+
+// let C1 = new circle(5, 'Cred')
+// console.log(C1)
+
+// console.log(Object.getOwnPropertyNames(C1))
+// let key = Object.getOwnPropertySymbols(C1)[0]
+// console.log(C1[key])
+
+
+
+                             //165 Private Properties with WeakMap in Javascript 
+
+
+
+// const _redius = new WeakMap()
+// const _name = new WeakMap()
+// const _resize = new WeakMap()
+
+// class circle{
+//     constructor(redius, name){
+//         this.size = 50
+//         _redius.set(this, redius)
+//         _name.set(this, name)
+//         _resize.set(this, () =>{
+//            console.log( this.size)
+//         })
+//     }
+
+//     draw(){
+//         console.log('drowing...')
+//         console.log(_redius.get(this),  _name.get(this))
+//         _resize.get(this)()
+//     }
+// }
+                                
+                                
+// let C1 = new circle(5, 'Cred')
+// C1.draw()
+
+
+
+
 
 
 
