@@ -9,7 +9,7 @@ import "./style.scss";
 
                                     //151 Iterator Basics in Javascript ES5
 
-const arr = [1, 2, 3]
+// const arr = [1, 2, 3]
 
 // function creatIterator(collection){
 //     let i = 0
@@ -75,9 +75,9 @@ const arr = [1, 2, 3]
 
                 //obj ke iterate korar niyom
                 //145 Custom Iteratable Object in Javascript 
-let obj ={
-    start: 1,
-    end: 5,
+// let obj ={
+//     start: 1,
+//     end: 5,
     // [Symbol.iterator]: function(){
     //     let currentValue = this.start
     //     let self = this
@@ -98,7 +98,7 @@ let obj ={
     //         yield currentValue++
     //     }
     // }
-}
+// }
 
    
   
@@ -137,6 +137,17 @@ let obj ={
 // console.log(it.next())
 
 
+                                            //tutorial unknown
+// function isIterable(obj){
+//     return typeof obj[Symbol.iterator] === 'function'
+// }
+// console.log(isIterable({}))
+// console.log(isIterable(obj))
+// console.log(isIterable([]))
+// console.log(isIterable('test'))
+// console.log(isIterable(new Number(45)))
+// console.log(isIterable(new Map()))
+// console.log(isIterable(new Set()))
 
 
                                         //155 Set in Javascript 
@@ -230,6 +241,8 @@ let a = {a: 10}, b = {b: 20}
 // console.log(weakMap.get(a))
 // console.log(weakMap.has(a))
 // console.log(weakMap.has(b))
+
+
 
 
                                     //160 Class in Javascript
@@ -371,7 +384,9 @@ let a = {a: 10}, b = {b: 20}
 
 
 
-                             //165 Private Properties with WeakMap in Javascript 
+
+
+                                //165 Private Properties with WeakMap in Javascript 
 
 
 
@@ -384,7 +399,7 @@ let a = {a: 10}, b = {b: 20}
 //         this.size = 50
 //         _redius.set(this, redius)
 //         _name.set(this, name)
-//         _resize.set(this, () =>{
+//         _resize.set(this, () =>{            // ai propertir datate acsses nite chaile normal function kaj korbe na
 //            console.log( this.size)
 //         })
 //     }
@@ -402,139 +417,106 @@ let a = {a: 10}, b = {b: 20}
 
 
 
+                        //166 Getter Setter in Javascript
 
 
+// const _redius = new WeakMap()
+// const _name = new WeakMap()
+// const _resize = new WeakMap()
 
+// class circle{
+//     constructor(redius, name){
+//         this.size = 50
+//         _redius.set(this, redius)
+//         _name.set(this, name)
+//         _resize.set(this, () =>{            
+//            console.log( this.size)
+//         })
+//     }
+//     get redius(){
+//         return _redius.get(this)
+//     }
+//     set redius(v){
+//         _redius.set(this, v)
+//     }
 
+//     draw(){
+//         console.log('drowing...')
+//         console.log(_redius.get(this),  _name.get(this))
+//         _resize.get(this)()
+//     }
+// }
+                                
+                                
+// let C1 = new circle(5, 'Cred')
+// C1.draw()
+// C1.redius = 50          //akane data set kora holo
+// console.log(C1.redius)
 
 
 
 
 
+                    //167 Inheritance in ES6 in Javascript
 
 
+// class Shape{
+//     constructor(color){
+//         this.color = color
+//     }
 
+//     draw(){
+//         console.log('Drawing...')
+//     }
+// }
 
 
+// class Rectangle extends Shape{
+//     constructor(color, width, height){
+//         super(color)
+//         this.width = width
+//         this.height = height
+//     }
 
+//     calculate(){
+//         return this.width * this.height
+//     }
+// }
 
+// let R1 = new Rectangle('red', 10, 20)
+// R1.draw()
+// let R2=  R1.calculate()
+// console.log(R2)
+// console.log(R1)
 
 
+                        //168 Method Overriding in ES6 in Javascript 
+                        //Rectangle.js, and Shape.js a niya jaoya hoise okan teke export kora hoise
 
 
+// import Rectangle from './Rectangle'
 
+                //akaner sob kisu Recangle and Shape js ache
 
+// let R1 = new Rectangle('red', 10, 20)
+// R1.draw()
+// // let R2=  R1.calculate()
+// // console.log(R2)
+// console.log(R1)
 
 
+// import * as math from './math'      //*(everything onek golo data ke aksonge import korte chaile  strict * beboher kora lagbe)
 
+// console.log(math)
+// console.log(math.add(15,20))
+// console.log(math.times(15,20))
 
 
 
+import { add, div} from './math'            //nirdisto kono kisu nite thaile avabe nite hobe
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(add(15,20))
+console.log(div(20,15))
 
 
 
