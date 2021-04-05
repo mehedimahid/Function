@@ -154,6 +154,7 @@
 //     xhr.send()
 // }
 
+
 // const BASE_URl = 'http://jsonplaceholder.typicode.com'
 
 
@@ -208,38 +209,29 @@
 
 
 
-function getIphone(isPassed) {
-    return new Promise((resolve, reject) => {
-        setTimeout (() =>{
-            if(isPassed){
-                resolve('I have got an I Phone')
-            } else{
-                reject(new Error('you have failed'))
-            }
-        },2000)
-    })
-}
+// function getIphone(isPassed) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout (() =>{
+//             if(isPassed){
+//                 resolve('I have got an I Phone')
+//             } else{
+//                 reject(new Error('you have failed'))
+//             }
+//         },2000)
+//     })
+// }
 
-// console.log(getIphone(true))
-// console.log(getIphone(false))
+// // console.log(getIphone(true))
+// // console.log(getIphone(false))
 
-getIphone(false)
-    .then((v) =>{
-        console.log(v)
-    })
-    .catch((e) => {
-        // console.log(e)
-        console.log(e.message)
-    })
-
-
-
-
-
-
-
-
-
+// getIphone(false)
+//     .then((v) =>{
+//         console.log(v)
+//     })
+//     .catch((e) => {
+//         // console.log(e)
+//         console.log(e.message)
+//     })
 
 
 

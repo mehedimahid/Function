@@ -1,5 +1,5 @@
 
-            //190 Promise API in Javascript
+//190 Promise API in Javascript
 
 
 // const delay = s => new Promise(resolve => setTimeout(resolve, s*1000)) 
@@ -49,35 +49,11 @@
 // Promise.race(promiseArr)
 //     .then(v => console.log(v))
 
-                            //191 Async Await in Javascript 
+ 
 
-// function myPromise(){
-//     return Promise.resolve('Test Value')
-// }
 
-// console.log(myPromise())
 
-//বিকল্প 
 
-// async function test(){
-//     return 'Test Value'
-// }
-
-// // test().then(v => alert(v))
-// console.log(test())
-
-// let p1 = Promise.resolve('I am a Promise')
-let p1 = new Promise(resolve =>{
-    setTimeout(resolve, 5000, 'Test Value')
-})
-
-async function myAsyncFun(){
-    // p1.then(v => alert(v))
-    let v = await p1
-    console.log(v)
-}
-
-myAsyncFun()
 
 
 
