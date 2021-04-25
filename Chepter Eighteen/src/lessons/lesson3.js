@@ -71,12 +71,22 @@ list.appendChild(lastItem)
 
         //207 How to Deal with Attributes in DOM Manipulation in Javascript
 
+// console.log(list.attributes)
+// console.log(list.getAttributeNames())
+// console.log(list.getAttributeNode('id'))
+// console.log(list.getAttributeNode('class'))
+// console.log(list.getAttribute('class'))
+// console.log(list.getAttribute('id'))
 
+// console.log(list.id)
+// console.log(list.classList)
+// console.log(list.className)
 
+// lastItem.id = 'last-item'
+lastItem.setAttribute('id', 'last-item')
 
-
-
-
-
+let attr = document.createAttribute('title')
+attr.value = 'i am last item'
+lastItem.setAttributeNode(attr)
 
 
