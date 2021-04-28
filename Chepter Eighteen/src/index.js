@@ -6,4 +6,5 @@ import "./style.scss";
 // import './lessons/lesson2.js'
 // import './lessons/lesson3.js'
 // import './lessons/lesson4.js'
-import './lessons/lesson5'
+// import './lessons/lesson5'
+import './lessons/lesson6.js'
