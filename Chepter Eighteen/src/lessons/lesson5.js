@@ -34,6 +34,7 @@ box.addEventListener('mousemove', function (e) {
 
 
 // 210 Event Delegation in DOM Manipulation 
+
 // [...list.children].forEach(li => {
 //     li.addEventListener('click', function (e) {
 //         e.target.remove()
